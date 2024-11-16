@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "types": ["firebase"],
+    "typeRoots": ["node_modules/@types", "node_modules/firebase"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
