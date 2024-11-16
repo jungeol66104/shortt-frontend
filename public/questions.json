@@ -1,0 +1,34 @@
+{
+  "questions": {
+    "question3": {
+      "title": "마이크 타이슨 vs 제이크 폴 누가 이길까?",
+      "options": {
+        "option1": {
+          "content": "마이크 타이슨",
+          "votes": 0
+        },
+        "option2": {
+          "content": "제이크 폴",
+          "votes": 0
+        }
+      },
+      "shares": 0,
+      "skips": 0
+    },
+    "question4": {
+      "title": "유튜버 유달근이 소녀상을 모독한 소말리를 폭행했다. 여러분의 생각은?",
+      "options": {
+        "option1": {
+          "content": "맞아야 한다",
+          "votes": 0
+        },
+        "option2": {
+          "content": "때리는 건 좀 그렇다",
+          "votes": 0
+        }
+      },
+      "shares": 0,
+      "skips": 0
+    }
+  }
+}

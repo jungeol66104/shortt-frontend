@@ -1,3 +1,14 @@
+@import url('./font.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-black text-white;
+}
+
+html, body {
+    height: 100%;
+}
+
