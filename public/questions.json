@@ -1,6 +1,6 @@
 {
   "questions": {
-    "question3": {
+    "question1": {
       "title": "마이크 타이슨 vs 제이크 폴 누가 이길까?",
       "options": {
         "option1": {
@@ -13,9 +13,10 @@
         }
       },
       "shares": 0,
-      "skips": 0
+      "skips": 0,
+      "views": 0
     },
-    "question4": {
+    "question2": {
       "title": "유튜버 유달근이 소녀상을 모독한 소말리를 폭행했다. 여러분의 생각은?",
       "options": {
         "option1": {
@@ -28,7 +29,8 @@
         }
       },
       "shares": 0,
-      "skips": 0
+      "skips": 0,
+      "views": 0
     }
   }
 }
