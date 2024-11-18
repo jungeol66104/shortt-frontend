@@ -119,19 +119,32 @@ export default function Page() {
                         <div className={'w-full flex flex-col items-center gap-10'}>
                             <div className={'w-full max-w-[540px] flex flex-col gap-3'}>
                                 <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} relative px-5 py-7 flex flex-col border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
-                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full text-right text-sm font-semibold`}>{option1Proportion}%</div>
+                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full flex justify-end gap-1.5 text-sm`}>
+                                        <span>{option1Proportion > option2Proportion ? '다수' : option1Proportion < option2Proportion ? '소수' : '밸런스'}</span>
+                                        <span>{option1Proportion}%</span>
+                                    </div>
                                     <span>{question?.options.option1.content}</span>
                                 </div>
-                                <div onClick={() => handleVote('option2')}
-                                     className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} relative px-7 py-7 flex flex-col border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
-                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full text-right text-sm font-semibold`}>{option2Proportion}%</div>
+                                <div onClick={() => handleVote('option2')} className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} relative px-7 py-7 flex flex-col border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full flex justify-end gap-1.5 text-sm`}>
+                                        <span>{option2Proportion > option1Proportion ? '다수' : option2Proportion < option1Proportion ? '소수' : '밸런스'}</span>
+                                        <span>{option2Proportion}%</span>
+                                    </div>
                                     <span>{question?.options.option2.content}</span>
                                 </div>
                             </div>
-                            <div>투표하고 결과를 확인해보세요!</div>
+                            { vote === 'before' &&
+                                <div className={'flex flex-col items-center gap-3'}>
+                                    <div className={'material-symbols-outlined text-[20px]'}>&#xe175;</div>
+                                    <span>투표하고 결과를 확인해보세요!</span>
+                                </div>}
+                            {vote !== 'before' &&
+                                <div className={'flex flex-col items-center gap-3'}>
+                                    <div className={'material-symbols-outlined text-[20px]'}>&#xeb59;</div>
+                                    <span>스와이프해서 다음 질문을 풀어보세요!</span>
+                                </div>}
                             <ShareButton/>
                         </div>
-                        <div></div>
                     </div>
                 }
                 {/*<div className={'sticky bottom-0 left-0 w-full h-[50px] flex items-center justify-between gap-3'}>*/}
