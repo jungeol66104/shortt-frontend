@@ -89,7 +89,7 @@ export default function Page() {
     // };
 
     return (
-        <div className={'w-full h-full'}>
+        <div className={'w-full h-full bg-neutral-800'}>
             <div className={'z-10 fixed top-[50px] left-1/2 transform -translate-x-1/2 w-full max-w-[640px] flex'}>
                 <div className={'absolute w-full flex'}>
                     <div className={'w-5 h-5 bg-black'}>
