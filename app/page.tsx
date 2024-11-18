@@ -108,11 +108,14 @@ export default function Page() {
                         <div className={'w-full flex flex-col items-center gap-5'}>
                             <div className={'flex flex-col items-center gap-2'}>
                                 <div className={'px-3 py-1 font-semibold text-green-600 rounded-full border-[0.11px] border-green-600'}>스포츠</div>
-                                <div className={'font-semibold text-xs text-red-600'}>오늘의 숏</div>
+                                <div className={'font-semibold text-xs text-red-500'}>오늘의 숏</div>
                             </div>
                             <h1 className={'max-w-[540px] text-2xl font-semibold leading-9'}>{question?.title}</h1>
                         </div>
-                        <div className={'description'}></div>
+                        <div className={'cursor-pointer p-5 h-max flex gap-3 hover:bg-neutral-700 border-[0.1px] border-neutral-500 rounded-xl'}>
+                            <div className={'w-[2px] bg-neutral-500 rounded-full'}></div>
+                            <div className={'flex items-center gap-3'}>{question?.link.title}</div>
+                        </div>
                         <div className={'w-full flex flex-col items-center gap-10'}>
                             <div className={'w-full max-w-[540px] flex flex-col gap-3'}>
                                 <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
