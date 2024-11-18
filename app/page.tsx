@@ -91,11 +91,11 @@ export default function Page() {
     return (
         <div className={'w-full h-full'}>
             <div className={'z-10 sticky top-[50px] left-0 w-full flex'}>
-                <div className={'absolute flex'}>
+                <div className={'absolute w-full flex'}>
                     <div className={'w-5 h-5 bg-black'}>
                         <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-l-[0.1px] border-neutral-600 rounded-tl-xl'}></div>
                     </div>
-                    <div className={'w-[600px] border-t-[0.1px] border-neutral-600'}></div>
+                    <div className={'w-[calc(100%-40px)] border-t-[0.1px] border-neutral-600'}></div>
                     <div className={'w-5 h-5 bg-black'}>
                         <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-r-[0.1px] border-neutral-600 rounded-tr-xl'}></div>
                     </div>
@@ -106,7 +106,10 @@ export default function Page() {
                 {!isEnd && question &&
                     <div className={'shrink-0 h-full flex flex-col items-center justify-between gap-14'}>
                         <div className={'w-full flex flex-col items-center gap-5'}>
-                            <div className={'px-3 py-1 font-semibold text-red-600 rounded-full border-[0.11px] border-red-600'}>스포츠</div>
+                            <div className={'flex flex-col items-center gap-2'}>
+                                <div className={'px-3 py-1 font-semibold text-green-600 rounded-full border-[0.11px] border-green-600'}>스포츠</div>
+                                <div className={'font-semibold text-xs text-red-600'}>오늘의 숏</div>
+                            </div>
                             <h1 className={'max-w-[540px] text-2xl font-semibold leading-9'}>{question?.title}</h1>
                         </div>
                         <div className={'description'}></div>
