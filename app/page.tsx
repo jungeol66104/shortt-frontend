@@ -26,14 +26,14 @@ export default function Page() {
         } catch (error) {console.error('Error updating votes:', error);}
     }
 
-    const updateSkips = async () => {
-        try {
-            const skipsRef = ref(db, `questions/${currentQuestionId}/skips`);
-            await runTransaction(skipsRef, (currentSkips) => {
-                return (currentSkips || 0) + 1;
-            });
-        } catch (error) {console.error('Error updating skips:', error);}
-    }
+    // const updateSkips = async () => {
+    //     try {
+    //         const skipsRef = ref(db, `questions/${currentQuestionId}/skips`);
+    //         await runTransaction(skipsRef, (currentSkips) => {
+    //             return (currentSkips || 0) + 1;
+    //         });
+    //     } catch (error) {console.error('Error updating skips:', error);}
+    // }
 
     const updateViews = async (questionId: string) => {
         try {
