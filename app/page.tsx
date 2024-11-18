@@ -75,58 +75,65 @@ export default function Page() {
         }
     };
 
-    const handleNext = async () => {
-        if (vote === 'before') await updateSkips()
-
-        const newQuestionId = currentQuestionId?.replace(/(\d+)$/, (match) => String(parseInt(match) + 1))
-
-        if (newQuestionId) {
-            const newQuestion = await fetchQuestion(newQuestionId);
-            setQuestion(newQuestion);
-            setCurrentQuestionId(newQuestionId)
-            setVote('before')
-        }
-    };
-
-
+    // const handleNext = async () => {
+    //     if (vote === 'before') await updateSkips()
+    //
+    //     const newQuestionId = currentQuestionId?.replace(/(\d+)$/, (match) => String(parseInt(match) + 1))
+    //
+    //     if (newQuestionId) {
+    //         const newQuestion = await fetchQuestion(newQuestionId);
+    //         setQuestion(newQuestion);
+    //         setCurrentQuestionId(newQuestionId)
+    //         setVote('before')
+    //     }
+    // };
 
     return (
         <div className={'w-full h-full'}>
-            <div className={'z-10 absolute top-0 left-0 w-full flex'}>
-                <div className={'w-5 h-5 bg-black'}>
-                    <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-l-[0.1px] border-neutral-600 rounded-tl-xl'}></div>
-                </div>
-                <div className={'w-[600px] border-t-[0.1px] border-neutral-600'}></div>
-                <div className={'w-5 h-5 bg-black'}>
-                    <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-r-[0.1px] border-neutral-600 rounded-tr-xl'}></div>
+            <div className={'z-10 sticky top-[50px] left-0 w-full flex'}>
+                <div className={'absolute flex'}>
+                    <div className={'w-5 h-5 bg-black'}>
+                        <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-l-[0.1px] border-neutral-600 rounded-tl-xl'}></div>
+                    </div>
+                    <div className={'w-[600px] border-t-[0.1px] border-neutral-600'}></div>
+                    <div className={'w-5 h-5 bg-black'}>
+                        <div className={'w-full h-full bg-neutral-800 border-t-[0.1px] border-r-[0.1px] border-neutral-600 rounded-tr-xl'}></div>
+                    </div>
                 </div>
             </div>
-            <div className={'relative pt-10 pb-5 px-5 w-full min-h-full h-fit flex flex-col justify-between bg-neutral-800 border-x-[0.1px] border-b-0 border-neutral-600 rounded-xl rounded-b-none'}>
+            <div className={'relative pt-8 pb-5 px-5 w-full min-h-full h-fit bg-neutral-800 border-x-[0.1px] border-b-0 border-neutral-600 rounded-xl rounded-b-none'}>
                 {isEnd && <div className={'w-full h-full flex items-center justify-center'}>축하해요! 준비한 게임은 여기까지입니다.</div>}
-                {!isEnd && !question && <div></div>}
                 {!isEnd && question &&
-                    <div className={'shrink-0 flex flex-col items-center justify-center gap-10'}>
-                        <h1 className={'max-w-[540px] text-2xl font-semibold leading-9'}>{question?.title}</h1>
-                        <div className={'w-full max-w-[540px] flex flex-col gap-3'}>
-                            <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
-                                <span>{question?.options.option1.content}</span>
-                                {vote !== 'before' && <span>{option1Proportion}%</span>}
-                            </div>
-                            <div onClick={() => handleVote('option2')} className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
-                                <span>{question?.options.option2.content}</span>
-                                {vote !== 'before' && <span>{option2Proportion}%</span>}
-                            </div>
+                    <div className={'shrink-0 h-full flex flex-col items-center justify-between gap-14'}>
+                        <div className={'w-full flex flex-col items-center gap-5'}>
+                            <div className={'px-3 py-1 font-semibold text-red-600 rounded-full border-[0.11px] border-red-600'}>스포츠</div>
+                            <h1 className={'max-w-[540px] text-2xl font-semibold leading-9'}>{question?.title}</h1>
                         </div>
-                        <div>투표하고 결과를 확인해보세요!</div>
+                        <div className={'description'}></div>
+                        <div className={'w-full flex flex-col items-center gap-10'}>
+                            <div className={'w-full max-w-[540px] flex flex-col gap-3'}>
+                                <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                    <span>{question?.options.option1.content}</span>
+                                    {vote !== 'before' && <span>{option1Proportion}%</span>}
+                                </div>
+                                <div onClick={() => handleVote('option2')} className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                    <span>{question?.options.option2.content}</span>
+                                    {vote !== 'before' && <span>{option2Proportion}%</span>}
+                                </div>
+                            </div>
+                            <div>투표하고 결과를 확인해보세요!</div>
+                            <ShareButton />
+                        </div>
+                        <div></div>
                     </div>
                 }
-                <div className={'sticky bottom-0 left-0 w-full h-[50px] flex items-center justify-between gap-3'}>
-                    <div></div>
-                    <div className={'flex items-center justify-center gap-3'}>
-                        <ShareButton />
-                        <button onClick={handleNext} className={'px-4 pt-0.5 h-10 bg-white hover:bg-neutral-200 rounded-full text-black font-medium'}>넘어가기</button>
-                    </div>
-                </div>
+                {/*<div className={'sticky bottom-0 left-0 w-full h-[50px] flex items-center justify-between gap-3'}>*/}
+                {/*    <div></div>*/}
+                {/*    <div className={'flex items-center justify-center gap-3'}>*/}
+                {/*        <ShareButton />*/}
+                {/*        <button onClick={handleNext} className={'px-4 pt-[1px] h-10 bg-white hover:bg-neutral-200 rounded-full text-black font-medium'}>넘어가기</button>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </div>
     );
@@ -138,13 +145,19 @@ interface question {
         "option1": {
             "content": string
             "votes": number
-        },
+        }
         "option2": {
             "content": string
             "votes": number
-        },
+        }
     }
-    "shares": number,
-    "skips": number,
+    "link": {
+        "title": string
+        "url": string
+        "tag": string
+    }
+    "shares": number
+    "skips": number
     "views": number
+    "date": string
 }
