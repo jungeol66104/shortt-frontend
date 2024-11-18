@@ -104,7 +104,7 @@ export default function Page() {
             <div className={'relative pt-8 pb-5 px-5 w-full min-h-full h-fit bg-neutral-800 border-x-[0.1px] border-b-0 border-neutral-600 rounded-xl rounded-b-none'}>
                 {isEnd && <div className={'w-full h-full flex items-center justify-center'}>축하해요! 준비한 게임은 여기까지입니다.</div>}
                 {!isEnd && question &&
-                    <div className={'shrink-0 h-full flex flex-col items-center justify-between gap-14'}>
+                    <div className={'shrink-0 h-full flex flex-col items-center justify-between gap-10'}>
                         <div className={'w-full flex flex-col items-center gap-5'}>
                             <div className={'flex flex-col items-center gap-2'}>
                                 <div className={'px-3 py-1 font-semibold text-green-600 rounded-full border-[0.11px] border-green-600'}>스포츠</div>
@@ -118,17 +118,18 @@ export default function Page() {
                         </div>
                         <div className={'w-full flex flex-col items-center gap-10'}>
                             <div className={'w-full max-w-[540px] flex flex-col gap-3'}>
-                                <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                <div onClick={() => handleVote('option1')} className={`${vote === 'option1' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} relative px-5 py-7 flex flex-col border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full text-right text-sm font-semibold`}>{option1Proportion}%</div>
                                     <span>{question?.options.option1.content}</span>
-                                    {vote !== 'before' && <span>{option1Proportion}%</span>}
                                 </div>
-                                <div onClick={() => handleVote('option2')} className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} p-5 flex items-center justify-between border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                <div onClick={() => handleVote('option2')}
+                                     className={`${vote === 'option2' ? 'bg-neutral-600 font-semibold' : 'bg-neutral-900'} ${vote === 'before' && 'cursor-pointer hover:bg-neutral-600'} relative px-7 py-7 flex flex-col border-[0.1px] border-neutral-600 rounded-xl text-lg`}>
+                                    <div className={`${vote === 'before' && 'hidden'} absolute top-3 right-5 w-full text-right text-sm font-semibold`}>{option2Proportion}%</div>
                                     <span>{question?.options.option2.content}</span>
-                                    {vote !== 'before' && <span>{option2Proportion}%</span>}
                                 </div>
                             </div>
                             <div>투표하고 결과를 확인해보세요!</div>
-                            <ShareButton />
+                            <ShareButton/>
                         </div>
                         <div></div>
                     </div>
