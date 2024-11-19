@@ -1,48 +1,224 @@
 {
   "questions": {
     "question1": {
-      "title": "마이크 타이슨 vs 제이크 폴 누가 이길까?",
+      "title": "아이유의 콘서트 티켓을 무료로 받을 수 있다면, 어떤 자리를 선택할 것인가?",
       "options": {
         "option1": {
-          "content": "마이크 타이슨",
+          "content": "무대 앞 VIP 자리",
           "votes": 0
         },
         "option2": {
-          "content": "제이크 폴",
+          "content": "가장 가까운 일반석",
           "votes": 0
         }
       },
       "link": {
-        "title": "58세 핵주먹 타이슨 패했지만…31살 어린 복서, 고개 숙였다",
-        "url": "https://chosun.com/international/international_general/2024/11/16/P5VX4NAOGFFZBEZWCS5F2WDWDA/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+        "title": "아이유, 팬들을 위한 공연",
+        "url": "https://entertain.naver.com/read?oid=108&aid=0003103120",
+        "tag": "연예"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-19T14:30:00.000Z"
+    },
+    "question2": {
+      "title": "손흥민이 월드컵에서 결승골을 넣으면, 어떤 방식으로 축하하고 싶나요?",
+      "options": {
+        "option1": {
+          "content": "밤새도록 응원하고 축하하기",
+          "votes": 0
+        },
+        "option2": {
+          "content": "단체로 축하 파티를 열기",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "손흥민, 월드컵 결승골",
+        "url": "https://sports.donga.com/article/all/20241118/10039992/1",
         "tag": "스포츠"
       },
       "shares": 0,
       "skips": 0,
       "views": 0,
-      "date": "2024-11-17"
+      "date": "2024-11-19T15:00:00.000Z"
     },
-    "question2": {
-      "title": "유튜버 유달근이 소녀상을 모독한 소말리를 폭행했다. 여러분의 생각은?",
+    "question3": {
+      "title": "국회의원 선거를 치른다면, 어떤 방식으로 선거 운동을 하겠습니까?",
       "options": {
         "option1": {
-          "content": "맞아야 한다",
+          "content": "SNS와 유튜브를 적극 활용",
           "votes": 0
         },
         "option2": {
-          "content": "때리는 건 좀 그렇다",
+          "content": "전통적인 유세와 현수막 사용",
           "votes": 0
         }
       },
       "link": {
-        "title": "각시탈? 조니 소말리 때려 체포된 유튜버, 누리꾼 반응 보니...",
-        "url": "https://www.ilyosisa.co.kr/news/article.html?no=245602",
+        "title": "2024 국회의원 선거와 정치 활동",
+        "url": "https://www.hankyung.com/politics/article/202411180432Y",
+        "tag": "정치"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-19T16:00:00.000Z"
+    },
+    "question4": {
+      "title": "학교 폭력을 해결할 수 있다면, 어떤 방식으로 접근할 것인가?",
+      "options": {
+        "option1": {
+          "content": "엄격한 처벌을 강화",
+          "votes": 0
+        },
+        "option2": {
+          "content": "심리 치료와 상담을 제공",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "학교폭력 예방과 해결 방안",
+        "url": "https://www.sbs.com/news/school-violence",
         "tag": "사회"
       },
       "shares": 0,
       "skips": 0,
       "views": 0,
-      "date": "2024-11-17"
+      "date": "2024-11-19T17:00:00.000Z"
+    },
+    "question5": {
+      "title": "경제 위기 상황에서 정부가 취해야 할 조치는?",
+      "options": {
+        "option1": {
+          "content": "대규모 경기 부양책을 시행",
+          "votes": 0
+        },
+        "option2": {
+          "content": "지출을 줄여서 재정 건전성 확보",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "경제 위기 대응 방안",
+        "url": "https://www.moneytoday.co.kr/news/article.asp?no=3478052",
+        "tag": "경제"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-19T18:00:00.000Z"
+    },
+    "question6": {
+      "title": "세계적으로 유명한 유튜버와 함께 협업할 수 있다면, 누구와 하고 싶은가?",
+      "options": {
+        "option1": {
+          "content": "피지컬 강자, 마크 로블스와",
+          "votes": 0
+        },
+        "option2": {
+          "content": "일상 브이로그의 대명사, 에마 챌스와",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "유튜브 스타들의 협업",
+        "url": "https://www.cnbc.com/2024/11/17/us-iran-nuclear-talks.html",
+        "tag": "연예"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-18T14:30:00.000Z"
+    },
+    "question7": {
+      "title": "세계 경제에 큰 영향을 미치는 국가, 어느 나라가 가장 중요한가?",
+      "options": {
+        "option1": {
+          "content": "미국",
+          "votes": 0
+        },
+        "option2": {
+          "content": "중국",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "세계 경제와 주요 국가들의 영향",
+        "url": "https://www.bbc.com/news/business-50234139",
+        "tag": "세계"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-18T15:00:00.000Z"
+    },
+    "question8": {
+      "title": "정치인으로서 어떤 정책을 가장 먼저 추진하고 싶은가?",
+      "options": {
+        "option1": {
+          "content": "사회적 불평등 해소를 위한 정책",
+          "votes": 0
+        },
+        "option2": {
+          "content": "청년 실업 문제 해결 정책",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "정치인들의 주요 정책 논의",
+        "url": "https://www.donga.com/news/article/all/20241116/10032054/1",
+        "tag": "정치"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-18T16:00:00.000Z"
+    },
+    "question9": {
+      "title": "다음 중 가장 중요한 사회적 문제는 무엇인가?",
+      "options": {
+        "option1": {
+          "content": "기후 변화",
+          "votes": 0
+        },
+        "option2": {
+          "content": "노인 빈곤",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "사회적 문제에 대한 논의",
+        "url": "https://www.sedaily.com/NewsView/29V8G1C6J0",
+        "tag": "사회"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-18T17:00:00.000Z"
+    },
+    "question10": {
+      "title": "만약 전 세계 경제를 재설계할 수 있다면, 어떤 경제 모델을 선택할 것인가?",
+      "options": {
+        "option1": {
+          "content": "자유 시장 경제",
+          "votes": 0
+        },
+        "option2": {
+          "content": "사회주의 경제",
+          "votes": 0
+        }
+      },
+      "link": {
+        "title": "전 세계 경제 모델과 이론",
+        "url": "https://www.bbc.com/news/business-50234139",
+        "tag": "세계"
+      },
+      "shares": 0,
+      "skips": 0,
+      "views": 0,
+      "date": "2024-11-18T18:00:00.000Z"
     }
   }
 }

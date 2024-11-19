@@ -11,5 +11,13 @@ body {
 
 html, body {
     height: 100%;
+    overflow: hidden;
 }
 
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+.hideScroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
