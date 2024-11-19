@@ -1,4 +1,4 @@
-import { ref, set, get, child, update, query, orderByChild, limitToFirst, startAt } from "firebase/database";
+import { ref, get, query, orderByChild, limitToFirst, startAt } from "firebase/database";
 import { db } from "./firebase";
 import {Question} from "@/types/global";
 
