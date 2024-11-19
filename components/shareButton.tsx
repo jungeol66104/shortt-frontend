@@ -40,7 +40,7 @@ const ShareButton = () => {
 
     return (
         <>
-            <button ref={shareButtonRef} className={'px-4 pt-0.5 h-10 bg-sky-500 hover:bg-sky-700 rounded-full font-medium'}>공유하기</button>
+            <button ref={shareButtonRef} className={'px-4 pt-[1px] h-10 bg-sky-500 hover:bg-sky-700 rounded-full font-medium'}>공유하기</button>
             <div className={`absolute bottom-12 left-1/2 transform -translate-x-1/2 px-4 py-2 w-[169px] bg-sky-500 text-white text-sm rounded-md shadow-lg transition-opacity duration-500 ${showPopup ? "opacity-100" : "opacity-0 pointer-events-none"}`}>링크가 복사되었습니다!</div>
         </>
     );
